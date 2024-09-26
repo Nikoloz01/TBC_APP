@@ -23,7 +23,7 @@ export const images = [{
 
     },
     {
-        imgUrl:'https://www.tradeinn.com/f/13599/135991712/levis---501--original-jeans.webp'
+        imgUrl:'https://www.garmentprinting.com/wp-content/uploads/2022/02/jumper.jpg'
     }
 
 ];

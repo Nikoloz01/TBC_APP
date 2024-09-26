@@ -18,7 +18,7 @@ export const ProductListCard = (props) => {
 
     }}>
       <ProductListCardTitle title={props.title} marginBottom={props.marginBottom} color={props.color} />
-      <ProductCardImages width='200px' borderRadius="5px" imageUrl={props.imageUrl} />
+      <ProductCardImages width='120px' borderRadius="5px" imageUrl={props.imageUrl} />
 
       <ProductCardDesc Price={props.Price}
         Size={props.Size}

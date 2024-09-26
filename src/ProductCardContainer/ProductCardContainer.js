@@ -1,42 +1,42 @@
 import React from 'react'
 import { ProductListCard } from '../productListCard/ProductListCard';
-import { images } from '../img';
+import { images } from '../productCardImages/img';
 export const ProductCardContainer = () => {
   return (
     <div className='productCardContainer'>
       <ProductListCard width='300px'
-        border="1px solid black"
+        border="1px solid grey"
         padding='20px'
         borderRadius="5px"
         title="T-Shirt"
         Price="79,99$"
-        Size="L"
+        Size="M-2XL"
         imageUrl={images['0'].imgUrl}
-        marginBottom="20px"
+        marginBottom="10px"
       />
 
       <ProductListCard width='300px'
-        border="1px solid black"
+        border="1px solid grey"
         padding='20px'
         borderRadius="5px"
         title="Coat"
         Price="199,89$"
-        Size="XL"
+        Size="S-4XL"
         imageUrl={images['1'].imgUrl}
-        marginBottom="20px"
+        marginBottom="10px"
 
 
 
       />
       <ProductListCard width='300px'
-        border="1px solid black"
+        border="1px solid grey"
         padding='20px'
         borderRadius="5px"
-        title="Bomber Jacket"
-        Price="99,89$"
-        Size="s"
+        title=" Jacket"
+        Price="109,89$"
+        Size="XS-L"
         imageUrl={images['2'].imgUrl}
-        marginBottom="20px"
+        marginBottom="10px"
 
 
 
@@ -46,14 +46,14 @@ export const ProductCardContainer = () => {
 
       />
       <ProductListCard width='300px'
-        border="1px solid black"
+        border="1px solid grey"
         padding='20px'
         borderRadius="5px"
         title="Bomber Jacket"
         Price="99,59$"
-        Size="S"
+        Size="XS-M"
         imageUrl={images['3'].imgUrl}
-        marginBottom="20px"
+        marginBottom="10px"
 
 
 
@@ -62,28 +62,29 @@ export const ProductCardContainer = () => {
 
       />
       <ProductListCard width='300px'
-        border="1px solid black"
+        border="3px dashed red"
         padding='20px'
         borderRadius="5px"
         color="red"
         title="Big Sale 50% Jacket"
         Price="49,99$"
-        Size="M"
+        Size="Left M"
         imageUrl={images['4'].imgUrl}
-        marginBottom="20px"
+        marginBottom="10px"
 
 
       />
 
       <ProductListCard width='300px'
-        border="1px solid black"
+        border="3px solid red"
         padding='20px'
         borderRadius="5px"
-        title="Converse All Star"
-        Price="119,89$"
-        Size="M"
-        imageUrl={images['4'].imgUrl}
-        marginBottom="20px"
+        title="Big Sale 70% Sweater"
+        Price="29,22$"
+        Size="Left S-M"
+        imageUrl={images['5'].imgUrl}
+        marginBottom="10px"
+        color="red"
 
 
 
