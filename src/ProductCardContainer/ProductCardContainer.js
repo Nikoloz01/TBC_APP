@@ -4,19 +4,19 @@ import { images } from '../img';
 export const ProductCardContainer = () => {
   return (
     <div className='productCardContainer'>
-        <ProductListCard width='300px'
-                        border="2px solid black"
-                        padding = '20px'
-                        borderRadius="5px"
-                        title="T-Shirt"
-                        Price="79,99$"
-                        Size="L"
-                        imageUrl= {images['0'].imgUrl}
-                        marginBottom="20px"
-        />
+      <ProductListCard width='300px'
+        border="1px solid black"
+        padding='20px'
+        borderRadius="5px"
+        title="T-Shirt"
+        Price="79,99$"
+        Size="L"
+        imageUrl={images['0'].imgUrl}
+        marginBottom="20px"
+      />
 
       <ProductListCard width='300px'
-        border="2px solid black"
+        border="1px solid black"
         padding='20px'
         borderRadius="5px"
         title="Coat"
@@ -25,11 +25,11 @@ export const ProductCardContainer = () => {
         imageUrl={images['1'].imgUrl}
         marginBottom="20px"
 
-        
+
 
       />
       <ProductListCard width='300px'
-        border="2px solid black"
+        border="1px solid black"
         padding='20px'
         borderRadius="5px"
         title="Bomber Jacket"
@@ -38,7 +38,7 @@ export const ProductCardContainer = () => {
         imageUrl={images['2'].imgUrl}
         marginBottom="20px"
 
-        
+
 
 
 
@@ -46,7 +46,7 @@ export const ProductCardContainer = () => {
 
       />
       <ProductListCard width='300px'
-        border="2px solid black"
+        border="1px solid black"
         padding='20px'
         borderRadius="5px"
         title="Bomber Jacket"
@@ -62,10 +62,10 @@ export const ProductCardContainer = () => {
 
       />
       <ProductListCard width='300px'
-        border="2px solid black"
+        border="1px solid black"
         padding='20px'
         borderRadius="5px"
-        
+        color="red"
         title="Big Sale 50% Jacket"
         Price="49,99$"
         Size="M"
@@ -73,25 +73,24 @@ export const ProductCardContainer = () => {
         marginBottom="20px"
 
 
-
       />
 
       <ProductListCard width='300px'
-        border="2px solid black"
+        border="1px solid black"
         padding='20px'
         borderRadius="5px"
         title="Converse All Star"
         Price="119,89$"
         Size="M"
-        imageUrl={images['5'].imgUrl}
+        imageUrl={images['4'].imgUrl}
         marginBottom="20px"
-        
+
 
 
 
       />
 
-      
+
 
     </div>
   )

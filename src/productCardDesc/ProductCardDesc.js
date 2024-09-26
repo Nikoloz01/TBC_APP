@@ -7,18 +7,18 @@ export const ProductCardDesc = (props) => {
 
   return (
     <div>
-        <p style={{
-          fontSize:props.fontSize,
-         display:props.display,
-         marginRight:props.marginRight,
-          
-         
-        
-        
+      <p style={{
+        fontSize: props.fontSize,
+        display: props.display,
+        marginRight: props.marginRight,
+        color: props.color,
 
-        }}>Price: {Price},
-        </p>
-          <span style={{fontSize:props.fontSize}}>Size:{Size}</span>
+
+
+
+      }}>Price: {Price},
+      </p>
+      <span style={{ fontSize: props.fontSize }}>Size:{Size}</span>
     </div>
   )
 }
