@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './header/Header';
-import Main from './main/Main';
 import Footer from './footer/Footer'
 import './App.css';
+import { ProductCardContainer } from '../src/ProductCardContainer/ProductCardContainer'
 
 function App() {
   return (
@@ -16,9 +16,10 @@ function App() {
 
           <Header />
         </header>
+
         <main>
 
-          <Main />
+          <ProductCardContainer />
         </main>
 
         <footer>
