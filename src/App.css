@@ -1,3 +1,4 @@
 @import './header/header.css';
 @import '../src/ProductCardContainer/productCardContainer.css';
 @import './footer/footer.css';
+@import './components-3/ProductListAssignments.css';

@@ -28,8 +28,13 @@
     background: linear-gradient(50deg, blue, green);
     padding: 10px;
     border-radius: 10px;
-}
 
+}
+.end span{
+    text-decoration: none;
+    color: white;
+    
+}
 img {
     background: white;
 }
