@@ -3,14 +3,17 @@
    justify-content: center;
    align-items: center;
    height: 100vh;
-   background:grey;
-   color: white;
+   background:white;
+   color:  black;
+   font-size: 18px;
+   text-align: center;
     
 
 }
 
 .assignmentsWrapper h2{
     text-align: center;
+    margin-bottom: 20px;
 };
 
 
