@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default function Header() {
 
@@ -11,11 +12,19 @@ export default function Header() {
 
 
                 <div className="end">
-                    <span>Home</span>
+                    <Link to={"/"}>
+                        <span>Home</span>
+                    </Link>
                     <span>Learn</span>
                     <span>Reference</span>
                     <span>blog</span>
-                    <span>Contact</span>
+                    <Link to={"/contact"}>
+                        <span>Contact</span>
+                    </Link>
+
+                    <Link to={"/Assignments3"}>
+                        <span>Assignments3</span>
+                    </Link>
                 </div>
             </div>
         </nav>
