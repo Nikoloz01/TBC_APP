@@ -29,7 +29,7 @@ const list = [
         id: '10004',
         name: 'ფეხსაცმელი',
         description: '100 პროცენტი ტყავი',
-        price: 19.99,
+        price: 79.99,
         currency: 'USD',
         imageURL: 'https://example.com/images/product-10004.jpg',
     },
@@ -38,10 +38,11 @@ const list = [
 const ProductTableAsssignments3 = () => {
     return (
         <>
-            <div className="container">
+            <div className='container'>
 
-                <div className='assignmentsWrapper'>
-                <h2>Product List</h2>
+                <div className="assignmentsWrapper">
+
+                    <h2>Product List</h2>
                     <table border="1" cellPadding="10" cellSpacing="0">
                         <thead>
                             <tr>
