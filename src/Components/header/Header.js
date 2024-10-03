@@ -16,12 +16,13 @@ export default function Header() {
                         <span>Home</span>
                     </Link>
                     <span>Learn</span>
-                    <span>Reference</span>
 
-                    <Link to={"/Blog"}>
-
-                    <span>Blog</span>
+                    <Link to={"/ProfileCardContainer"}>
+                    <span>Profile</span>
                     </Link>
+
+
+                   
                     <Link to={"/contact"}>
                         <span>Contact</span>
                     </Link>
