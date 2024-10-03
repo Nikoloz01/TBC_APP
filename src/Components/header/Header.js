@@ -17,7 +17,11 @@ export default function Header() {
                     </Link>
                     <span>Learn</span>
                     <span>Reference</span>
-                    <span>blog</span>
+
+                    <Link to={"/Blog"}>
+
+                    <span>Blog</span>
+                    </Link>
                     <Link to={"/contact"}>
                         <span>Contact</span>
                     </Link>
