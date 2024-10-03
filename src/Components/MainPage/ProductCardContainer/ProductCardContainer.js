@@ -1,6 +1,8 @@
 import React from 'react'
-import { ProductListCard } from '../productListCard/ProductListCard';
+import { ProductListCard } from '../../MainPage/productListCard/ProductListCard';
 import { images } from '../productCardImages/img';
+
+
 export const ProductCardContainer = () => {
   return (
     <div className='productCardContainer'>

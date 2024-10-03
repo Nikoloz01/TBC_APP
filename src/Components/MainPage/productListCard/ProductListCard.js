@@ -3,7 +3,7 @@ import { ProductListCardTitle } from '../productListCardTitle/ProductListCardTit
 import { ProductCardImages } from '../productCardImages/ProductCardImages'
 
 import { ProductCardDesc } from '../productCardDesc/ProductCardDesc'
-import { ProductCardButton } from '../productCardButton/ProductCardButton';
+import { ProductCardButton } from '../../MainPage/productCardButton/ProductCardButton';
 
 export const ProductListCard = (props) => {
   return (
