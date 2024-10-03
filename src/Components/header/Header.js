@@ -15,7 +15,11 @@ export default function Header() {
                     <Link to={"/"}>
                         <span>Home</span>
                     </Link>
-                    <span>Learn</span>
+                    <Link to={"/Blog"}>
+
+                    <span>Blog</span>
+                    </Link>
+                    
 
                     <Link to={"/ProfileCardContainer"}>
                     <span>Profile</span>

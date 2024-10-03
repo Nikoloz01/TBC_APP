@@ -8,7 +8,7 @@ export const Profile = (props) => {
 
 
           <img src={props.imgAdd} alt="" />
-          <p><b> Name:</b> {props.name}</p>
+          <p><b> FirstName:</b> {props.name}</p>
           <p><b>Lastname:</b>{props.lastname}</p>
           <p><b>Email:</b>{props.Email}</p>
 

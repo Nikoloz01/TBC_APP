@@ -7,6 +7,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Contact from './Components/Router-Pages/Contact/Contact';
 import ProductTableAsssignments3 from './Components/Router-Pages/components-3/ProductListAssignments';
 import ProfileCardContainer from './Components/Router-Pages/Profile/ProfileCardContainer';
+import Blog from './Components/Router-Pages/Blog/Blog';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
               <Route path='/ProfileCardContainer' element={<ProfileCardContainer />} />
               <Route path='/' element={<ProductCardContainer />} />
               <Route path='/Assignments3' element={<ProductTableAsssignments3 />} />
+              <Route path='/Blog' element={<Blog />} />
 
 
             </Routes>
