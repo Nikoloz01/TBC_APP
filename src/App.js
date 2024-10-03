@@ -4,7 +4,7 @@ import Footer from './Components/footer/Footer'
 import './App.css';
 import { ProductCardContainer } from '../src/Components/MainPage/ProductCardContainer/ProductCardContainer';
 import {Route, Routes, BrowserRouter} from 'react-router-dom';
-import Contact from './Components/Contact/Contact';
+import Contact from './Components/Router-Pages/Contact/Contact';
 import ProductTableAsssignments3 from './Components/Router-Pages/components-3/ProductListAssignments';
 
 function App() {
