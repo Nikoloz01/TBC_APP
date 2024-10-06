@@ -34,6 +34,10 @@ export default function Header() {
                     <Link to={"/Assignments3"}>
                         <span>Assignments3</span>
                     </Link>
+
+                    <Link to={"/Products"}>
+                        <span>Products</span>
+                    </Link>
                 </div>
             </div>
         </nav>
