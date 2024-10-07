@@ -23,6 +23,7 @@ export default function PostDetail({ post }) {
 export async function getStaticProps({ params }) {
   const res = await fetch(`https://dummyjson.com/posts/${params.id}`);
   const post = await res.json();
+  
 
   return {
     props: {

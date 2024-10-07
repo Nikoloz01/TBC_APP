@@ -10,6 +10,7 @@ const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPosts, setTotalPosts] = useState(0);
   const [animate, setAnimate] = useState(false);
+ 
 
   useEffect(() => {
     const fetchPosts = async () => {
