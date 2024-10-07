@@ -15,6 +15,10 @@ export const ProductCardContainer = () => {
         Size="M-2XL"
         imageUrl={images['0'].imgUrl}
         marginBottom="10px"
+        display="grid"
+        gap="10px"
+
+        
       />
 
       <ProductListCard width='300px'
