@@ -18,14 +18,10 @@ import { ProductCardContainer } from '../src/Components/MainPage/ProductCardCont
 function App() {
   return (
     <div>
-    <header>
-        <Header />
-    </header>
     <main>
     <ProductCardContainer />
     </main>
     <footer>
-        <Footer />
     </footer>
 </div>
   );

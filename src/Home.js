@@ -1,7 +1,7 @@
-import React from 'react'
+import ProductCardContainer from '../src/Components/MainPage/ProductCardContainer/ProductCardContainer';
 
-export const Home = () => {
+export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <ProductCardContainer />
+  );
 }

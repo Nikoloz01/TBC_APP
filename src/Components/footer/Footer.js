@@ -8,7 +8,6 @@ export default function Footer() {
             <nav>
                 <ul>
                     <li>Installation</li>
-
                     <li>Overview</li>
                     <li>Community</li>
                     <li>Hooks</li>
