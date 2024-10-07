@@ -1,12 +1,16 @@
-import ProductCard from '../../src/Components/product/ProductCard';
-import { useEffect, useState } from 'react';
+import ProductCard from "../../src/Components/product/ProductCard";
+import { useEffect, useState } from "react";
 const Products = () => {
   const [list, setList] = useState([]);
-  const productsUrl = 'https://dummyjson.com/products';
+  
+
+
+  const productsUrl = "https://dummyjson.com/products";
 
   useEffect(() => {
     async function fetchProducts() {
       try {
+       
         const response = await fetch(productsUrl);
         const data = await response.json();
         setList(data.products);
@@ -25,7 +29,6 @@ const Products = () => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      
     </div>
   );
 };

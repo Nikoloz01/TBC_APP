@@ -34,6 +34,9 @@ export const images2 = [{
    },
    {
        imageAdd:'https://media.istockphoto.com/id/1221204650/photo/business-can-not-wait.jpg?s=612x612&w=0&k=20&c=1ZJn_BWN-OqIlnjohELZnsUlaXsw9LsKHkUDS8mHfhY='
+   },
+   {
+       imageAdd: 'https://img.freepik.com/free-photo/programming-background-concept_23-2150170137.jpg'
    }
 
 

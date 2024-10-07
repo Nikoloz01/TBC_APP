@@ -6,7 +6,7 @@ export const ProductCardDesc = (props) => {
 
 
   return (
-    <div>
+    <div >
       <p style={{
         fontSize: props.fontSize,
         display: props.display,
