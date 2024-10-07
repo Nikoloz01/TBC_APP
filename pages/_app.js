@@ -9,7 +9,7 @@ import '../styles/products.css';
 import '../styles/profile.css';
 import '../styles/ProfileCardContainer.css';
 import '../styles/productCardContainer.css';
-
+import '../styles/postDetails.css';
 function MyApp({ Component, pageProps }) {
   return (
     <div>

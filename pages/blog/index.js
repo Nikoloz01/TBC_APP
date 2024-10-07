@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 const POSTS_PER_PAGE = 9;
@@ -61,7 +62,7 @@ const Blog = () => {
       <div className={`grid-container ${animate ? 'fade-in' : ''}`}>
         {posts.length > 0 ? (
           posts.map((post) => (
-            <div className="grid-card" key={post.id}>
+            <Link className="grid-card" key={post.id} href={`/blog/${post.id}`}>
               <h2>{post.title}</h2>
               <p>{post.body}</p>
               <div className="card-footer">
@@ -78,7 +79,7 @@ const Blog = () => {
                   {post.views} Views
                 </span>
               </div>
-            </div>
+            </Link>
           ))
         ) : (
           <p>No posts available</p>
