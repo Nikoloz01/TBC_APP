@@ -1,0 +1,13 @@
+@import './profile.css';
+
+.profile-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+

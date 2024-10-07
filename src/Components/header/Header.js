@@ -1,43 +1,20 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import Link from 'next/link'
+
+
 
 export default function Header() {
 
     return (
         <nav>
             <div className="main-container">
-
-
-
-
-
                 <div className="end">
-                    <Link to={"/"}>
-                        <span>Home</span>
-                    </Link>
-                    <Link to={"/Blog"}>
-
-                    <span>Blog</span>
-                    </Link>
-                    
-
-                    <Link to={"/ProfileCardContainer"}>
-                    <span>Profile</span>
-                    </Link>
-
-
-                   
-                    <Link to={"/contact"}>
-                        <span>Contact</span>
-                    </Link>
-
-                    <Link to={"/Assignments3"}>
-                        <span>Assignments3</span>
-                    </Link>
-
-                    <Link to={"/Products"}>
-                        <span>Products</span>
-                    </Link>
+                    <Link href="/"> <span>Home</span> </Link>
+                    <Link href="/blog"> <span>Blog</span> </Link>
+                    <Link href="/profile"> <span> Profile </span> </Link>
+                    <Link href="/contact"><span>Contact</span></Link>
+                    <Link href="/components-3"><span>Assignments3</span></Link>
+                    <Link href="/products"><span>Products</span></Link>
                 </div>
             </div>
         </nav>
