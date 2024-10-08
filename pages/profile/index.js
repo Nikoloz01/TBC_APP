@@ -77,6 +77,86 @@ const ProfileCardContainer = () => {
         fontSize="18px"
         cursor="pointer"
 
+<<<<<<< HEAD
+=======
+
+
+      />
+
+      <Profile
+        title="Backend Developer"
+        name="Henry"
+        lastname="Stones"
+        Email="Henryhen20@yahoo.com"
+        imgAdd={images2['9'].imageAdd}
+        color="white"
+        backgroundColor="rgb(17, 113, 223)"
+        border="none"
+        width="100%"
+        padding="12px 30px"
+        borderRadius="10px"
+        marginBlock="10px"
+        fontSize="18px"
+        cursor="pointer"
+
+
+      />
+
+
+      <Profile name="Helen"
+        lastname="Mackenly"
+        Email="HelenMackk@gmail.com"
+        imgAdd={ProfileImages['4'].imageAdd}
+        title="It Support"
+        color="white"
+        backgroundColor="rgb(17, 113, 223)"
+        border="none"
+        width="100%"
+        padding="12px 30px"
+        borderRadius="10px"
+        marginBlock="10px"
+        fontSize="18px"
+        cursor="pointer"
+      />
+
+
+      <Profile name="Noah"
+        lastname="Gudjonsen"
+        Email="Gudjonsen.N@yahoo.com"
+        imgAdd={ProfileImages['6'].imageAdd}
+        title="System Administrator"
+        color="white"
+        backgroundColor="rgb(17, 113, 223)"
+        border="none"
+        width="100%"
+        padding="12px 30px"
+        borderRadius="10px"
+        marginBlock="10px"
+        fontSize="18px"
+        cursor="pointer"
+
+
+      />
+
+
+      <Profile name="Andrew"
+        lastname="MacAlister"
+        Email="AndrewMac1@yahoo.com"
+        imgAdd={ProfileImages['7'].imageAdd}
+        title="Network Engineer"
+        color="white"
+        backgroundColor="rgb(17, 113, 223)"
+        border="none"
+        width="100%"
+        padding="12px 30px"
+        borderRadius="10px"
+        marginBlock="10px"
+        fontSize="18px"
+        cursor="pointer"
+
+
+      />
+>>>>>>> 9902e2e4c7e080e7db387ea81aaccb495a1ab8c8
 
 
       />

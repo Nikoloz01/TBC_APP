@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ProductCardButton = ({ padding, backgroundColor, color, border, borderRadius, fontSize, cursor,margin, }) => {
+export const ProductCardButton = ({ padding, backgroundColor, color, border, borderRadius, fontSize, cursor,margin }) => {
 
   return (
     <button style={{
