@@ -156,7 +156,7 @@ const ProfileCardContainer = () => {
       />
 
 
-      />
+      
 
       <Profile
         title="Backend Developer"
