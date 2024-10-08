@@ -77,8 +77,6 @@ const ProfileCardContainer = () => {
         fontSize="18px"
         cursor="pointer"
 
-<<<<<<< HEAD
-=======
 
 
       />
@@ -156,7 +154,6 @@ const ProfileCardContainer = () => {
 
 
       />
->>>>>>> 9902e2e4c7e080e7db387ea81aaccb495a1ab8c8
 
 
       />
