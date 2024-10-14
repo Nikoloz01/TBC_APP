@@ -5,10 +5,11 @@ const Products = () => {
   const [loading, setLoading] = useState(true);
   const [sortOrder, setSortOrder] = useState("asc");
   const [searchQuery, setSearchQuery] = useState("");
+  const [debouncedSearchQuery, setDebouncedSearchQuery] = useState(searchQuery);
   const [isSearching, setIsSearching] = useState(false);
 
   const productsUrl = isSearching
-    ? `https://dummyjson.com/products/search?q=${searchQuery}`
+    ? `https://dummyjson.com/products/search?q=${debouncedSearchQuery}`
     : `https://dummyjson.com/products?sortBy=price&order=${sortOrder}`;
 
   useEffect(() => {
@@ -25,12 +26,18 @@ const Products = () => {
       }
     };
 
-    const delayDebounceFn = setTimeout(() => {
-      fetchProducts();
+    fetchProducts();
+  }, [sortOrder, productsUrl]);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearchQuery(searchQuery);
     }, 500);
 
-    return () => clearTimeout(delayDebounceFn);
-  }, [sortOrder, productsUrl]);
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [searchQuery]);
 
   const handleSortToggle = () => {
     setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
