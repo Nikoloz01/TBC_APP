@@ -1,6 +1,4 @@
-
 export default function PostDetail({ post }) {
-
   return (
     <div className="container">
       <h1 className="title">{post.title}</h1>
@@ -10,7 +8,7 @@ export default function PostDetail({ post }) {
         <span>Dislikes: {post.reactions.dislikes}</span>
       </div>
       <p className="views">Views: {post.views}</p>
-      <ul className="tags">
+      <ul>
         {post.tags.map((tag, index) => (
           <li key={index}>#{tag}</li>
         ))}
@@ -19,24 +17,24 @@ export default function PostDetail({ post }) {
   );
 }
 
-export async function getStaticProps({ params }) {
-  const res = await fetch(`https://dummyjson.com/posts/${params.id}`);
-  const post = await res.json();
-  
+export async function getServerSideProps({ params }) {
+  try {
+    const res = await fetch(`https://dummyjson.com/posts/${params.id}`);
+    const post = await res.json();
 
-  return {
-    props: {
-      post,
-    },
-  };
-}
+    if (!post) {
+      throw new Error('No post found');
+    }
 
-export async function getStaticPaths() {
-  const res = await fetch('https://dummyjson.com/posts');
-  const posts = await res.json();
-  const paths = posts.posts.map(post => ({
-    params: { id: post.id.toString() },
-  }));
-
-  return { paths, fallback: true };
+    return {
+      props: {
+        post,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching post:', error);
+    return {
+      notFound: true,
+    };
+  }
 }

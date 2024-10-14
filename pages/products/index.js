@@ -1,33 +1,15 @@
 import { useState, useEffect } from "react";
 
-const Products = () => {
-  const [list, setList] = useState([]);
-  const [loading, setLoading] = useState(true);
+const Products = ({ products }) => {
   const [sortOrder, setSortOrder] = useState("asc");
   const [searchQuery, setSearchQuery] = useState("");
   const [debouncedSearchQuery, setDebouncedSearchQuery] = useState(searchQuery);
-  const [isSearching, setIsSearching] = useState(false);
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [animate, setAnimate] = useState(false);
 
-  const productsUrl = isSearching
-    ? `https://dummyjson.com/products/search?q=${debouncedSearchQuery}`
-    : `https://dummyjson.com/products?sortBy=price&order=${sortOrder}`;
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch(productsUrl);
-        const data = await response.json();
-        setList(data.products);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, [sortOrder, productsUrl]);
+  const handleSortToggle = () => {
+    setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
+  };
 
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -39,49 +21,86 @@ const Products = () => {
     };
   }, [searchQuery]);
 
-  const handleSortToggle = () => {
-    setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
-    setIsSearching(false);
-  };
+  useEffect(() => {
+    let sortedProducts = [...products];
 
-  const handleSearchInput = (e) => {
-    setSearchQuery(e.target.value);
-    setIsSearching(true);
-  };
+    // Sort by price
+    sortedProducts.sort((a, b) =>
+      sortOrder === "asc" ? a.price - b.price : b.price - a.price
+    );
+
+    // Filter by search query
+    if (debouncedSearchQuery) {
+      sortedProducts = sortedProducts.filter((product) =>
+        product.title.toLowerCase().includes(debouncedSearchQuery.toLowerCase())
+      );
+    }
+
+    // Trigger animation
+    setAnimate(true);
+    setTimeout(() => setAnimate(false), 500);
+
+    setFilteredProducts(sortedProducts);
+  }, [sortOrder, debouncedSearchQuery, products]);
+
+  if (!filteredProducts || filteredProducts.length === 0) {
+    return <p>No products available.</p>;
+  }
 
   return (
     <div className="product-list">
       <h1>Products</h1>
+
+      {/* Search Input */}
       <div className="search-container">
         <input
           type="text"
           placeholder="Search products..."
           value={searchQuery}
-          onChange={handleSearchInput}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
-      <button onClick={handleSortToggle}>
+
+      {/* Sort Button */}
+      <button onClick={handleSortToggle} className="sort-button">
         Sort by Price: {sortOrder === "asc" ? "Ascending" : "Descending"}
       </button>
 
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <div className="grid">
-          {list.length > 0 ? (
-            list.map((product) => (
-              <div key={product.id} className="product-card">
-                <h2>{product.title}</h2>
-                <p>Price: ${product.price}</p>
-              </div>
-            ))
-          ) : (
-            <p>No products found.</p>
-          )}
-        </div>
-      )}
+      {/* Product Grid */}
+      <div className={`grid ${animate ? "fade-in" : ""}`}>
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="product-card">
+            <h2 className="product-title">{product.title}</h2>
+            <p className="product-price">Price: ${product.price}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
+
+export async function getServerSideProps() {
+  try {
+    const res = await fetch(`https://dummyjson.com/products`);
+    const data = await res.json();
+
+    if (!data.products) {
+      throw new Error('No products found');
+    }
+
+    return {
+      props: {
+        products: data.products || [],
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    return {
+      props: {
+        products: [],
+      },
+    };
+  }
+}
 
 export default Products;
