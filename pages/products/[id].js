@@ -58,7 +58,6 @@ export default function ProductsDetails({ products }) {
     );
 }
 
-// Fetch post data based on the dynamic route (post ID)
 export async function getStaticProps({ params }) {
     const res = await fetch(`https://dummyjson.com/products/${params.id}`);
     const products = await res.json();
@@ -70,15 +69,14 @@ export async function getStaticProps({ params }) {
     };
 }
 
-// Generate the paths for all post IDs
+
 export async function getStaticPaths() {
     const res = await fetch("https://dummyjson.com/products");
     const products = await res.json();
     console.log(products);
-    // Map through the posts to generate paths for each post ID
     const paths = products.products.map((product) => ({
         params: { id: product.id.toString() },
     }));
 
-    return { paths, fallback: true }; // Enable fallback for dynamic routes
+    return { paths, fallback: true }; 
 }

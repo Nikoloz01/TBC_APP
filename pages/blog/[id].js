@@ -19,7 +19,6 @@ export default function PostDetail({ post }) {
   );
 }
 
-// Fetch post data based on the dynamic route (post ID)
 export async function getStaticProps({ params }) {
   const res = await fetch(`https://dummyjson.com/posts/${params.id}`);
   const post = await res.json();
@@ -32,15 +31,12 @@ export async function getStaticProps({ params }) {
   };
 }
 
-// Generate the paths for all post IDs
 export async function getStaticPaths() {
   const res = await fetch('https://dummyjson.com/posts');
   const posts = await res.json();
-
-  // Map through the posts to generate paths for each post ID
   const paths = posts.posts.map(post => ({
     params: { id: post.id.toString() },
   }));
 
-  return { paths, fallback: true }; // Enable fallback for dynamic routes
+  return { paths, fallback: true };
 }
